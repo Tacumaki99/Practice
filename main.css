@@ -1,6 +1,6 @@
 #product-overview {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url("images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box,
+    url("images/freedom.jpg") center/cover no-repeat border-box,
     #ff1b68;
     /*background: url("freedom.jpg");
     background-size: cover;
@@ -9,9 +9,8 @@
     background-origin: border-box;*/
     /*background-image: linear-gradient(to left bottom, red, transparent);*/
     /*background-image: radial-gradient();*/
-    width: 100%;
+    width: 100vw;
     height: 33vh;
-    margin-top: 2.75rem;
     position: relative;
     /*
     border: 5px black solid;
@@ -22,22 +21,28 @@
     */
 }
 
-.section-title {
-    color: #2ddf5c;
-    text-align: center;
-}
-
 #product-overview h1 {
     color: white;
     font-family:'Anton', sans-serif;
     position: absolute;
     bottom: 5%;
     left: 3%;
+    font-size: 1.6rem;
 }
 
-.plan__list {
-    width: 80%;
-    margin:auto;
+@media (min-width: 40rem) and (min-height: 40rem) {
+    #product-overview {
+        height: 40vh;
+        background-position: 50% 25%;/*50% 20%*/
+    }
+
+    #product-overview h1 {
+        font-size: 3rem;
+    }
+}
+
+.section-title {
+    color: #2ddf5c;
     text-align: center;
 }
 
@@ -45,16 +50,14 @@
     background: #d5ffdc;
     text-align: center;
     padding: 1rem;
-    margin: 0.5rem;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
+    margin: 0.5rem 0;
+    width: 100%;
 }
+
 
 .plan--highlighted {
     background: #19b84c;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .plan__annotation {
@@ -91,6 +94,32 @@
     margin:0.5rem 0;
 }
 
+@media (min-width: 40rem) {
+    .plan__list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .plan {
+        width: 30%;
+        min-width: 13rem;
+        max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 28rem;
+        margin: 1rem;
+    }
+
+    .plan--highlighted {
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        height: 30rem;
+        z-index: 50;
+    }
+}
+
 #key-features {
     background-color: #ff1b68;
     margin-top: 5rem;
@@ -109,10 +138,16 @@
     text-align: center;
 }
 
-.key-feature {
-    display: inline-block;
-    width:30%;
-    vertical-align: top;
+@media (min-width:40rem) {
+    .key-feature {
+        width:30%;
+        max-width: 25rem;
+    }
+
+    .key-feature__list {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .key-feature__image {
