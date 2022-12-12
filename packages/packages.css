@@ -33,7 +33,7 @@ main {
 .package:hover,
 .package:active {
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    border-color: #ff5454; /*!important;*/
+    border-color: #ff5454;
 }
 
 .package a {
@@ -65,7 +65,6 @@ main {
     color:#0e4f1f;
     background: white;
     font-family: 'Montserrat', sans-serif;
-    /*font: 700 1.2rem "AnonymousPro", sans-serif;*/
 }
 
 .clearfix {
